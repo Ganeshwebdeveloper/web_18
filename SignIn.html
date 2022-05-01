@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+        }
+ 
+        #imgdiv {
+             width: 9%;
+             height: 40px;
+             margin: auto;
+        }
+        #imgdiv > img {
+            width: 100%;
+           height: 120px;
+        }
+        #formdiv {
+            width:30%;
+            height: 400px;
+            margin-top: 100px;
+            margin-left: 33.5%;
+            box-shadow: rgba(128, 128, 128, 0.299)  1px 1px 25px 0px;
+            padding: 15px;
+            border-radius: 16px;
+        }
+        h3 {
+            text-align: center;
+            font-size: 20px;
+        }
+        input {
+            width: 90%;
+            height: 38px;
+            text-align: center;
+            margin-left: 4%;
+            margin-top: 20px;
+            border: 0px;
+            box-shadow:rgba(0, 0, 0, 0.552) 0px 0px 2px 0px;
+            border-radius: 8px;
+        }
+        p {
+            margin-left: 4%;
+            margin-bottom:-15px;
+            color: rgba(0, 0, 0, 0.73) ;
+            font-weight: 250;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+       p>span {
+            color: blue;
+            padding-left: 40%;
+        }
+        #submit {
+             color: white;
+             background-color: blue;
+             height: 44px;
+             width: 92%;
+        }
+        .lastsignin {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+       <div id="imgdiv">
+           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADh
+           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
+           Jggg==" alt="logo">
+       </div>
+       <div id="formdiv">
+           <h3>Sign In</h3>
+           <form id="form">
+               <p>Email</p>
+               <input type="email" id="email">
+               <p>password <span>forget password?</span></p>
+               <input type="password" id="password">
+
+               <input type="submit" id="submit" value="Sign In">
+           </form>
+           <p class="lastsignin">
+               Don't have an account? <a href="Signup.html">Sign Up</a>
+           </p>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+       var form = document.querySelector("#form");
+       form.addEventListener("submit", myfunc);
+
+       function myfunc() {
+         event.preventDefault();
+      var obj= {
+        xEmail : form.email.value,
+        xpassword : form.password.value
+      }
+      var arr1 = JSON.parse(localStorage.getItem("signUpData"));
+      console.log(arr1[0].xEmail);
+      console.log(arr1[0].xPassword)
+
+     
+      if (obj.xEmail != arr1[0].xEmail ){
+          alert("Email doesn't registered")
+      }
+      else if (obj.xpassword != arr1[0].xPassword){
+          alert("password Incorrect")
+      }
+     else {
+          alert("Successfully SignIn")
+      }
+     
+   }
+
+</script>

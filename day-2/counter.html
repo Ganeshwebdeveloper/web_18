@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #total {
+            width: 50%;
+            height: 150px;
+            box-shadow: 0px 2px 30px 1px  rgba(128, 128, 128, 0.593);
+            margin: auto;
+            margin-top: 60px;
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: center; 
+            padding-top: 10px;
+        }
+        #total >div {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        #inc {
+            background-color: green;
+            display: block;
+            border-radius: 5px;
+            height: 50px;
+            color: aliceblue;
+            padding: 20px;
+        }
+        #dec {
+            background-color: red;
+            display: block;
+            border-radius: 5px;
+            height: 50px;
+            color: aliceblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+          <h1 id="counter">Counter value shows here</h1>
+          <div>
+              <button id="inc">INCREMENT</button>
+              <button id="dec">DECREMENT</button>
+          </div>
+    </div>
+    <hr>
+</body>
+</html>
+
+<script>
+    var inc = document.getElementById("inc")
+    var dec = document.getElementById("dec")
+    var disp = document.getElementById("counter")
+
+    inc.addEventListener("click",incfunc);
+    dec.addEventListener("click",decfunc);
+    
+var counter = JSON.parse(localStorage.getItem("count"))|| 0;
+    function incfunc(){
+       counter++;
+       disp.innerText= counter; 
+        localStorage.setItem("count",JSON.stringify(counter))
+    }
+    function decfunc(){
+        // var counter = arr[0]
+        counter--;
+        disp.innerText=counter;
+        localStorage.setItem("count",JSON.stringify(counter))
+    }
+    
+</script>
